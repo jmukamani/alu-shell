@@ -1,1 +1,1 @@
-prints the absolute path name of the current working directory in long format
+script that changes the working directory to the previous one
