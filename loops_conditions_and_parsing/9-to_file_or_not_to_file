@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 #gives information about school file
 #checks it the file exists and print "school files exists" or print "school file does not exists" if the file does not exist.
 
