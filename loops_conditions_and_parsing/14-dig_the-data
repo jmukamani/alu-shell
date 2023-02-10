@@ -2,6 +2,6 @@
 #groups visitors IP and HTTP status code and displays this data
 if [ ! -f "apache-access.log" ]; then
 	echo "Error: File apache-access.log does not exist."
-	exit 1
+	exit 
 fi
 awk '{print $1,$9}' apache-acess.log | sort | uniq -c | sort -nr
