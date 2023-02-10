@@ -14,4 +14,4 @@ do
 	(( minute++ ))
     done
     (( hours++ ))
-done | head -n 70
+done
