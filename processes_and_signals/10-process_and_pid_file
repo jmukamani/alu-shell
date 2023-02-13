@@ -10,5 +10,6 @@ while true; do
 done &
 
 #Handle signals
-trap 'echo "Ihate the kill command"; rm "$file"; exit' SIGTERM SIGQUIT
-trap 'echo "Y U no love me?!"; exit' SIGINT
+trap 'echo "Ihate the kill command"; exit' SIGTERM
+trap 'echo "Y U no love me?!"; exit' SIGIN
+trap 'rm "$file"; exit'SIGQUIT SIGTERM
