@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
-#Creates the file /var/run/myscript.pid containing its PID
+#Display process and PID file
+
 file="/var/run/myscript.pid"
 echo $$ > "$file"
 
-#Displays "To infinity and beyond"
-while true; do
+#handles signals
+trap 'echo "I hate the kill command"; rm "$file"; exit' SIGTERM SIGQUIT
+trap 'echo "Y U no love me?!"; exit' SIGINT
+
+while :; do
 	echo "To infinity and beyond"
 	sleep 2
-done &
-
-#Handle signals
-trap 'echo "I hate the kill command"; exit' SIGTERM
-trap 'echo "Y U no love me?!"; exit' SIGIN
-trap 'rm "$file"; exit' SIGQUIT SIGTERM
+done
