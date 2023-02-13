@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env bash
 #Displays "To infinity and beyond" indefinetly with a sleep 2 between each iteration
 #displays "I am invicible! ! !" when receiving SIGTERM signal
 
